@@ -28,6 +28,7 @@ button {
 }
 
 nav {
+  position: relative;
   height: 80px;
   width: 100%;
   padding: 0 8rem;
@@ -56,6 +57,56 @@ nav ul .logo img {
 
 nav ul li {
   cursor: pointer;
+}
+
+nav .icon {
+  display: none;
+}
+
+@media only screen and (max-width: 930px) {
+  nav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: -250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgba(135, 223, 252, 0.7);
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  nav .icon {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 115%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2rem;
+  }
+  nav .menu-close {
+    display: none;
+    left: 15%;
+  }
+  nav ul {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 3em;
+  }
 }
 
 section {
@@ -166,6 +217,108 @@ section .content .right .blob {
   }
   section .socials img {
     width: 100px;
+  }
+}
+
+.section-two {
+  background: #0077c0;
+}
+
+.section-two .container {
+  padding: 4rem 4.5rem;
+  width: 100%;
+  color: #fff;
+}
+
+.section-two .container h3:first-child {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.section-two .container h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.section-two .container .benefits {
+  margin-top: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.section-two .container .benefits .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 350px;
+}
+
+.section-two .container .benefits .item img {
+  width: 96px;
+}
+
+.section-two .container .benefits .item h3 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+.section-two .container .benefits .item p {
+  margin-top: 7px;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-two .container .benefits {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4rem;
+  }
+  .section-two .container .benefits .item {
+    max-width: 600px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 642px) {
+  html {
+    font-size: 65%;
+  }
+  section {
+    padding: 0 1rem;
+  }
+  section .content .right .image-container {
+    min-width: 200px;
+  }
+  section .content .right .blob {
+    min-width: 200px;
+  }
+  section .socials img {
+    width: 60px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
