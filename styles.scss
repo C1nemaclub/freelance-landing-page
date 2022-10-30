@@ -61,7 +61,7 @@ nav {
     top: 0;
     left: -250px;
     display: flex;
-    background: rgba(135, 223, 252, 0.7);
+    background: rgba(199, 238, 255, 0.7);
     z-index: 1000;
     backdrop-filter: blur(6px);
     transition: 0.25s ease-in-out;
@@ -135,7 +135,6 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
-        //transform: scale(2);
         width: 80%;
         min-width: 400px;
       }
@@ -182,7 +181,7 @@ section {
 .section-two {
   background: #0077c0;
   .container {
-    padding: 4rem 4.5rem;
+    padding: 4rem 0rem;
     width: 100%;
     color: #fff;
     h3:first-child {
@@ -227,12 +226,134 @@ section {
 @media only screen and (max-width: 900px) {
   .section-two {
     .container {
+      padding-left: 4rem;
+      padding-right: 4rem;
       .benefits {
         flex-direction: column;
         gap: 4rem;
         .item {
           max-width: 600px;
           align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.section-three {
+  margin-top: 0;
+  .container {
+    padding: 2.875rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    .left,
+    .right {
+      width: 50%;
+    }
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image-container {
+        width: 100%;
+        max-width: 400px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      h2 {
+        font-size: 3rem;
+        max-width: 500px;
+      }
+      ul {
+        margin-top: 1.9375rem;
+        li {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-bottom: 10px;
+          span {
+            width: 30px;
+            height: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50%;
+            background: rgba(199, 238, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-four {
+  background: #c7eeff;
+  .container {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .left,
+    .right {
+      width: 50%;
+      position: relative;
+    }
+    .left {
+      h2 {
+        max-width: 550px;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-top: 0.75rem;
+        max-width: 600px;
+      }
+      button {
+        margin-top: 2rem;
+      }
+    }
+    .right {
+      .image-container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        min-width: 300px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .section-four {
+    .container {
+      flex-direction: column;
+      padding: 4rem 4rem 0 4rem;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .right {
+        .image-container {
+          max-width: 400px;
         }
       }
     }
@@ -258,6 +379,15 @@ section {
     .socials {
       img {
         width: 60px;
+      }
+    }
+  }
+  .section-three {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .left {
+        order: 1;
       }
     }
   }
