@@ -342,6 +342,176 @@ section {
   }
 }
 
+.section-five {
+  background: #fafafa;
+  margin-top: 0;
+  .container {
+    padding: 4rem 0rem;
+    width: 100%;
+    h3:first-child {
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: normal;
+    }
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    .card-container {
+      margin-top: 1.25em;
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+      .card {
+        grid-column: span 1;
+        width: 100%;
+        max-width: 350px;
+        padding: 1em;
+        background: #fff;
+        .user {
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+          .info {
+            h4 {
+              margin-bottom: 6px;
+            }
+            i {
+              color: goldenrod;
+            }
+          }
+          .image-container {
+            width: 60px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        p {
+          margin-top: 10px;
+          line-height: 24px;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+.section-banner {
+  width: 100%;
+  margin-top: 3.5rem;
+  padding: 2rem 8rem;
+  .container {
+    background: #0077c0;
+    display: flex;
+    align-items: center;
+    .left,
+    .right {
+      width: 50%;
+    }
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image-container {
+        width: 100%;
+        max-width: 400px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .right {
+      color: #fff;
+      h3 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: normal;
+      }
+      h2 {
+        font-size: 3rem;
+        max-width: 500px;
+      }
+      button {
+        margin-top: 1rem;
+        color: #0077c0;
+        background: #fff;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background: #1d242b;
+  padding: 0 8rem;
+  color: #fff;
+  .container {
+    padding: 1.75rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .column-one {
+      margin-right: auto;
+      flex-direction: column;
+      img {
+        width: 150px;
+        margin-bottom: 1.5rem;
+      }
+      .social-icons {
+        margin-bottom: 1.5rem;
+        i {
+          margin-right: 1rem;
+          background: rgb(83, 83, 83);
+          padding: 0.5rem;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    .column {
+      min-width: 200px;
+      ul li {
+        cursor: pointer;
+      }
+    }
+    .column:not(.column-one) {
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+    .column-four {
+      .input-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
+        align-items: center;
+        padding: 0.6em 1em;
+        background: rgb(83, 83, 83);
+        border-radius: 5px;
+        input {
+          outline: none;
+          border: 0;
+          background: none;
+          color: #fff;
+          &::placeholder {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 930px) {
   .section-four {
     .container {
@@ -355,6 +525,34 @@ section {
         .image-container {
           max-width: 400px;
         }
+      }
+    }
+  }
+  .section-banner {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 2rem;
+      padding-bottom: 0;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .right {
+        order: -1;
+        text-align: center;
+        h2 {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  footer {
+    .container {
+      .column {
+        margin-bottom: 2rem;
       }
     }
   }
@@ -386,9 +584,16 @@ section {
     .container {
       flex-direction: column;
       align-items: center;
+      .left,
+      .right {
+        width: 80%;
+      }
       .left {
         order: 1;
       }
     }
+  }
+  .section-banner {
+    padding: 0;
   }
 }
